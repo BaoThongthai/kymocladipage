@@ -19,11 +19,25 @@
 
 /* Icon: Messenger, Zalo, Gọi điện */
 .icon.messenger {
-  background-image: url('https://upload.wikimedia.org/wikipedia/commons/6/6c/Facebook_Logo_2023.png');
+  background-image: url('https://www.seekpng.com/png/detail/769-7695335_facebook-messenger-facebook-messenger-round-icon.png');
 }
 .icon.zalo {
   background-image: url('https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png');
 }
 .icon.phone {
   background-image: url('https://e7.pngegg.com/pngimages/759/922/png-clipart-telephone-logo-iphone-telephone-call-smartphone-phone-electronics-text-thumbnail.png');
+}
+
+
+/* ghim khi sroll */
+#portfolio-filters {
+  position: sticky;
+  top: 80px; /* khoảng cách với top, tuỳ chỉnh theo header của bạn */
+  z-index: 99;
+  background: white;
+  padding: 10px 0;
+}
+#portfolio-filters {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  border-radius: 6px;
 }
