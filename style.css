@@ -1,12 +1,25 @@
 .fixed-contact-icons {
   position: fixed;
-  left: 15px;         /* đổi từ right -> left */
+  left: 15px;
+  /* đổi từ right -> left */
   bottom: 15px;
   z-index: 9999;
   display: flex;
-  flex-direction: row;    /* nằm ngang */
   gap: 10px;
+
+
+  position: fixed;
+  /* hoặc right:16px nếu muốn bên phải */
+  display: flex;
+  flex-direction: column;
+  /* xếp dọc */
+  align-items: center;
+  /* khoảng cách giữa các icon */
+  z-index: 10000;
 }
+
+
+
 
 .fixed-contact-icons .icon {
   width: 45px;
@@ -14,16 +27,18 @@
   border-radius: 50%;
   background-size: cover;
   background-position: center;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 /* Icon: Messenger, Zalo, Gọi điện */
 .icon.messenger {
   background-image: url('https://www.seekpng.com/png/detail/769-7695335_facebook-messenger-facebook-messenger-round-icon.png');
 }
+
 .icon.zalo {
   background-image: url('https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png');
 }
+
 .icon.phone {
   background-image: url('https://e7.pngegg.com/pngimages/759/922/png-clipart-telephone-logo-iphone-telephone-call-smartphone-phone-electronics-text-thumbnail.png');
 }
@@ -32,12 +47,56 @@
 /* ghim khi sroll */
 #portfolio-filters {
   position: sticky;
-  top: 80px; /* khoảng cách với top, tuỳ chỉnh theo header của bạn */
+  top: 80px;
+  /* khoảng cách với top, tuỳ chỉnh theo header của bạn */
   z-index: 99;
   background: white;
   padding: 10px 0;
 }
+
 #portfolio-filters {
-  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   border-radius: 6px;
+}
+
+
+/* css nút hiện form tư vấn */
+.popup-fab-img {
+  position: fixed;
+  left: 4px;        /* sang bên phải */
+  top: 80px;       /* sát mép dưới như nút scroll-top */
+  z-index: 10000;
+  width: auto;
+  max-width: 130px;    /* chỉnh kích thước phù hợp */
+  cursor: pointer;
+  opacity: 0;         /* ban đầu ẩn */
+  transform: translateX(-140%);
+  transition: transform .5s ease, opacity .5s ease;
+  will-change: transform, opacity;
+}
+
+
+
+
+/* Optional: hiệu ứng hover nếu muốn */
+.popup-fab-img:hover {
+  transform: scale(1.05);
+}
+
+/* Khi thêm class .show -> trượt vào và hiện */
+.popup-fab-img.show{
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+/* Hiệu ứng nhấp nháy phóng to thu nhỏ */
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.popup-fab-img {
+  animation: pulse 1s infinite ease-in-out; /* 1s 1 lần, lặp vô hạn */
 }

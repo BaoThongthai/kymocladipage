@@ -54,6 +54,13 @@
 
       <!-- Các icon cố định ở góc trái dưới, nằm ngang -->
       <div class="fixed-contact-icons">
+          <!-- Thay nút bằng ảnh -->
+  <img
+    id="openPopupImg"
+    src="https://vnpc.vn/uploads/anh%20chuyen%20muc/tu-van-ngay-1.png"
+    alt="Tư vấn ngay"
+    class="popup-fab-img"
+  />
         <a href="tel:0768714480" class="icon phone"></a>
         <a href="https://zalo.me/0768714480" onclick="dialzalo('0768714480')" target="_blank" class="icon zalo"></a>
         <a href="https://m.me/noithatkymocdn" target="_blank" class="icon messenger"></a>
@@ -116,9 +123,9 @@
           </div>
 
 
-      </div>
+        </div>
 
-                <div class="row gy-4">
+        <div class="row gy-4">
           <div class="col-12" data-aos="fade-up">
             <h3>Tủ kệ tivi</h3>
             <img src="assets/img/ketivi.png" class="img-fluid rounded-4 mb-4" alt="">
@@ -131,71 +138,71 @@
           </div>
         </div>
 
-      <!-- Overlay (ẩn mặc định) -->
-      <div id="formPopupOverlay"
-        style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 9998;"></div>
+        <!-- Overlay (ẩn mặc định) -->
+        <div id="formPopupOverlay"
+          style="display: none; position: fixed; inset: 0; background: rgba(0, 0, 0, 0.6); z-index: 9998;"></div>
 
-      <!-- Popup Form (ẩn mặc định) -->
-      <div id="formPopup"
-        style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 30px; border-radius: 10px; z-index: 9999; max-width: 600px; width: 90%; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);">
-        <span style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;"
-          onclick="closeFormPopup()">×</span>
-        <h3 style="text-align: center; margin-bottom: 20px;">ĐĂNG KÝ NHẬN TƯ VẤN</h3>
-        <form id="contactForm" method="post" class="php-email-form">
-          <div class="row gy-3">
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Tên" required>
+        <!-- Popup Form (ẩn mặc định) -->
+        <div id="formPopup"
+          style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #fff; padding: 30px; border-radius: 10px; z-index: 9999; max-width: 600px; width: 90%; box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);">
+          <span style="position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer;"
+            onclick="closeFormPopup()">×</span>
+          <h3 style="text-align: center; margin-bottom: 20px;">ĐĂNG KÝ NHẬN TƯ VẤN</h3>
+          <form id="contactForm" method="post" class="php-email-form">
+            <div class="row gy-3">
+              <div class="col-md-6">
+                <input type="text" name="name" class="form-control" placeholder="Tên" required>
+              </div>
+              <div class="col-md-6">
+                <input type="text" name="phone" class="form-control" placeholder="Số điện thoại" required
+                  pattern="[0-9]{10,11}">
+              </div>
+              <div class="col-md-12 text-center">
+                <div class="error-message"></div>
+                <div class="sent-message">Đã gửi thành công!</div>
+                <button type="submit"
+                  style="background-color: #e53935; color: white; padding: 10px 24px; border: none; border-radius: 6px;">Gửi
+                  Yêu Cầu</button>
+                <button onclick="window.location.href='tel:0768714480'"
+                  style="background-color: white; color: #e53935; padding: 10px 24px; border: 2px solid #e53935; border-radius: 6px; margin-left: 10px;">Gọi
+                  Ngay</button>
+              </div>
             </div>
-            <div class="col-md-6">
-              <input type="text" name="phone" class="form-control" placeholder="Số điện thoại" required
-                pattern="[0-9]{10,11}">
-            </div>
-            <div class="col-md-12 text-center">
-              <div class="error-message"></div>
-              <div class="sent-message">Đã gửi thành công!</div>
-              <button type="submit"
-                style="background-color: #e53935; color: white; padding: 10px 24px; border: none; border-radius: 6px;">Gửi
-                Yêu Cầu</button>
-              <button onclick="window.location.href='tel:0768714480'"
-                style="background-color: white; color: #e53935; padding: 10px 24px; border: 2px solid #e53935; border-radius: 6px; margin-left: 10px;">Gọi
-                Ngay</button>
-            </div>
+          </form>
+
+          <!-- Đường gạch phân cách với chữ -->
+          <div
+            style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 10px;">
+            <div style="flex: 1; height: 1px; background-color: #999;"></div>
+            <span style="padding: 0 12px; font-weight: 500; color: #666;">hoặc</span>
+            <div style="flex: 1; height: 1px; background-color: #999;"></div>
           </div>
-        </form>
 
-        <!-- Đường gạch phân cách với chữ -->
-        <div
-          style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 10px;">
-          <div style="flex: 1; height: 1px; background-color: #999;"></div>
-          <span style="padding: 0 12px; font-weight: 500; color: #666;">hoặc</span>
-          <div style="flex: 1; height: 1px; background-color: #999;"></div>
-        </div>
+          <!-- ICON LIÊN HỆ -->
+          <div class="d-flex justify-content-center mt-4 gap-3">
+            <a href="tel:0768714480" title="Gọi điện">
+              <img
+                src="https://e7.pngegg.com/pngimages/759/922/png-clipart-telephone-logo-iphone-telephone-call-smartphone-phone-electronics-text-thumbnail.png"
+                alt="Phone" style="width: 36px; height: 36px;">
+            </a>
+            <a href="https://www.facebook.com/noithatkymoc/" target="_blank" title="Messenger">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/1024px-Facebook_Logo_2023.png"
+                alt="Messenger" style="width: 36px; height: 36px;">
+            </a>
+            <a href="https://m.me/noithatkymocdn" target="_blank" title="Messenger">
+              <img
+                src="https://www.seekpng.com/png/detail/769-7695335_facebook-messenger-facebook-messenger-round-icon.png"
+                alt="Messenger" style="width: 36px; height: 36px;">
+            </a>
+            <a href="https://zalo.me/0768714480" target="_blank" title="Zalo">
+              <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png" alt="Zalo"
+                style="width: 36px; height: 36px;">
+            </a>
 
-        <!-- ICON LIÊN HỆ -->
-        <div class="d-flex justify-content-center mt-4 gap-3">
-          <a href="tel:0768714480" title="Gọi điện">
-            <img
-              src="https://e7.pngegg.com/pngimages/759/922/png-clipart-telephone-logo-iphone-telephone-call-smartphone-phone-electronics-text-thumbnail.png"
-              alt="Phone" style="width: 36px; height: 36px;">
-          </a>
-          <a href="https://www.facebook.com/noithatkymoc/" target="_blank" title="Messenger">
-            <img
-              src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/1024px-Facebook_Logo_2023.png"
-              alt="Messenger" style="width: 36px; height: 36px;">
-          </a>
-          <a href="https://m.me/noithatkymocdn" target="_blank" title="Messenger">
-            <img
-              src="https://www.seekpng.com/png/detail/769-7695335_facebook-messenger-facebook-messenger-round-icon.png"
-              alt="Messenger" style="width: 36px; height: 36px;">
-          </a>
-          <a href="https://zalo.me/0768714480" target="_blank" title="Zalo">
-            <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png" alt="Zalo"
-              style="width: 36px; height: 36px;">
-          </a>
+          </div>
 
         </div>
-
-      </div>
 
     </section>
 
@@ -207,44 +214,14 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Liên Hệ</h2>
-        <p>Kết Nối với chúng tôi để đươc tư vấn miễn phí</p>
+        <p>
+          Để Lại Thông Tin Tư Vấn
+        </p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
 
         <div class="row gy-4">
-          <div class="col-lg-6 ">
-            <div class="row gy-4">
-
-              <div class="col-lg-12">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                  data-aos-delay="200">
-                  <i class="bi bi-geo-alt"></i>
-                  <h3>Địa Chỉ</h3>
-                  <p>38 Đa Mặn 15, Phường Ngũ Hành Sơn, Đà Nẵng</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                  data-aos-delay="300">
-                  <a href="tel:0768714480"><i class="bi bi-telephone-fill"></i></a>
-                  <h3>Điện Thoại</h3>
-                  <p>0768714480 - 0918366507</p>
-                </div>
-              </div><!-- End Info Item -->
-
-              <div class="col-md-6">
-                <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up"
-                  data-aos-delay="400">
-                  <a href="https://m.me/noithatkymocdn"><i class="bi bi-messenger"></i></a>
-                  <h3>Messenger</h3>
-                  <p>Nội Thất Kỷ Mộc Đà Nẵng</p>
-                </div>
-              </div><!-- End Info Item -->
-
-            </div>
-          </div>
 
 
 
@@ -279,11 +256,46 @@
                   <div class="sent-message">Đã Gửi. Chúng tôi sẽ liên hệ lại sớm nhất</div>
 
                   <button type="submit">Gửi Yêu Cầu</button>
+                  <!-- Đường gạch phân cách với chữ -->
+                  <div
+                    style="display: flex; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 10px;">
+                    <div style="flex: 1; height: 1px; background-color: #999;"></div>
+                    <span style="padding: 0 12px; font-weight: 500; color: #666;">hoặc</span>
+                    <div style="flex: 1; height: 1px; background-color: #999;"></div>
+                  </div>
+
+                  <!-- ICON LIÊN HỆ -->
+                  <div class="d-flex justify-content-center mt-4 gap-3">
+                    <a href="tel:0768714480" title="Gọi điện">
+                      <img
+                        src="https://e7.pngegg.com/pngimages/759/922/png-clipart-telephone-logo-iphone-telephone-call-smartphone-phone-electronics-text-thumbnail.png"
+                        alt="Phone" style="width: 36px; height: 36px;">
+                    </a>
+                    <a href="https://www.facebook.com/noithatkymoc/" target="_blank" title="Messenger">
+                      <img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Facebook_Logo_2023.png/1024px-Facebook_Logo_2023.png"
+                        alt="Messenger" style="width: 36px; height: 36px;">
+                    </a>
+                    <a href="https://m.me/noithatkymocdn" target="_blank" title="Messenger">
+                      <img
+                        src="https://www.seekpng.com/png/detail/769-7695335_facebook-messenger-facebook-messenger-round-icon.png"
+                        alt="Messenger" style="width: 36px; height: 36px;">
+                    </a>
+                    <a href="https://zalo.me/0768714480" target="_blank" title="Zalo">
+                      <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/01/Logo-Zalo-Arc.png" alt="Zalo"
+                        style="width: 36px; height: 36px;">
+                    </a>
+
+                  </div>
                 </div>
 
               </div>
             </form>
+
+
           </div><!-- End Contact Form -->
+
+
 
         </div>
 
@@ -358,7 +370,7 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+  <a href="#" id="scroll-top" style="display: none;" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
@@ -457,28 +469,46 @@
     });
   </script>
   <!-- scroll hiện sau 3s -->
-  <script>
-    let popupShown = false;
+<script>
+  // mở/đóng popup như cũ
+  function showFormPopup(){
+    document.getElementById('formPopup').style.display='block';
+    document.getElementById('formPopupOverlay').style.display='block';
+  }
+  function closeFormPopup(){
+    document.getElementById('formPopup').style.display='none';
+    document.getElementById('formPopupOverlay').style.display='none';
+  }
 
-    function showFormPopup() {
-      document.getElementById('formPopup').style.display = 'block';
-      document.getElementById('formPopupOverlay').style.display = 'block';
-    }
+  window.addEventListener('DOMContentLoaded', function () {
+    const img = document.getElementById('openPopupImg');
+    const overlay = document.getElementById('formPopupOverlay');
+    if (overlay) overlay.addEventListener('click', closeFormPopup);
+    if (img) img.addEventListener('click', showFormPopup);
 
-    function closeFormPopup() {
-      document.getElementById('formPopup').style.display = 'none';
-      document.getElementById('formPopupOverlay').style.display = 'none';
-    }
+    const SCROLL_TRIGGER = 200; // đổi số này nếu muốn xuất hiện sớm/muộn hơn
 
-    window.addEventListener('scroll', () => {
-      if (!popupShown && window.scrollY > 100) {
-        popupShown = true;
-        setTimeout(showFormPopup, 1000); // 3 giây sau khi scroll
+    function onScrollReveal(){
+      if (window.scrollY > SCROLL_TRIGGER){
+        img.classList.add('show');       // thêm class để chạy animation
+        window.removeEventListener('scroll', onScrollReveal); // chỉ chạy 1 lần
       }
-    });
+    }
+    window.addEventListener('scroll', onScrollReveal);
+    onScrollReveal(); // phòng khi người dùng đã ở dưới sẵn
+  });
+</script>
 
-    document.getElementById('formPopupOverlay').addEventListener('click', closeFormPopup);
-  </script>
+
+<script>
+  // Mở popup khi nhấn vào ảnh
+  document.getElementById('openPopupImg')
+    .addEventListener('click', showFormPopup);
+</script>
+
+
+
+
 
 
 
