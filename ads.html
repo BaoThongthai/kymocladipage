@@ -12,8 +12,8 @@
 
 
   <!-- Favicons -->
-  <link href="https://github.com/BaoThongthai/kymocladipage/blob/main/logo-favicon.jpg" rel="icon">
-  <link href="https://github.com/BaoThongthai/kymocladipage/blob/main/logo-favicon.jpg" rel="apple-touch-icon">
+  <link href="assets/logoGoogle.png" rel="icon">
+  <link href="assets/logoGoogle.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -31,16 +31,18 @@
 
 
   <!-- Open Graph cho Facebook -->
-<meta property="og:title" content="Nội Thất Kỷ Mộc - Kỷ Mộc Furniture - Nội Thất Gỗ - Nội Thất Miền Trung" />
-<meta property="og:description" content="Kỷ Mộc chuyên cung cấp sofa gỗ, bàn ăn, giường, tủ tivi gỗ tự nhiên cao cấp." />
-<meta property="og:image" content="https://github.com/BaoThongthai/kymocladipage/blob/main/logo.jpg?raw=true" />
-<meta property="og:url" content="https://noithatkymoc.com" />
-<meta property="og:type" content="website" />
+  <meta property="og:title" content="Nội Thất Kỷ Mộc - Kỷ Mộc Furniture - Nội Thất Gỗ - Nội Thất Miền Trung" />
+  <meta property="og:description"
+    content="Kỷ Mộc chuyên cung cấp sofa gỗ, bàn ăn, giường, tủ tivi gỗ tự nhiên cao cấp." />
+  <meta property="og:image" content="https://github.com/BaoThongthai/kymocladipage/blob/main/logo.jpg?raw=true" />
+  <meta property="og:url" content="https://noithatkymoc.com" />
+  <meta property="og:type" content="website" />
 
-<!-- Zalo Link Preview -->
-<meta name="zalo:image" content="https://github.com/BaoThongthai/kymocladipage/blob/main/logo.jpg?raw=true" />
-<meta name="zalo:title" content="Nội Thất Kỷ Mộc - Kỷ Mộc Furniture - Nội Thất Gỗ - Nội Thất Miền Trung" />
-<meta name="zalo:description" content="Kỷ Mộc chuyên cung cấp sofa gỗ, bàn ăn, giường, tủ tivi gỗ tự nhiên cao cấp." />
+  <!-- Zalo Link Preview -->
+  <meta name="zalo:image" content="https://github.com/BaoThongthai/kymocladipage/blob/main/logo.jpg?raw=true" />
+  <meta name="zalo:title" content="Nội Thất Kỷ Mộc - Kỷ Mộc Furniture - Nội Thất Gỗ - Nội Thất Miền Trung" />
+  <meta name="zalo:description"
+    content="Kỷ Mộc chuyên cung cấp sofa gỗ, bàn ăn, giường, tủ tivi gỗ tự nhiên cao cấp." />
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
@@ -55,12 +57,8 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <h1 class="sitename">KỶ MỘC</h1>
       </a>
-          <img
-    id="openPopupImg"
-    src="https://vnsava.com/wp-content/uploads/2023/12/gif-tu-van.gif"
-    alt="Tư vấn ngay"
-    class="popup-fab-img"
-  />
+      <img id="openPopupImg" src="https://vnsava.com/wp-content/uploads/2023/12/gif-tu-van.gif" alt="Tư vấn ngay"
+        class="popup-fab-img" />
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Trang chủ</a></li>
@@ -72,7 +70,7 @@
 
       <!-- Các icon cố định ở góc trái dưới, nằm ngang -->
       <div class="fixed-contact-icons">
-          <!-- Thay nút bằng ảnh -->
+        <!-- Thay nút bằng ảnh -->
 
         <a href="tel:0768714480" class="icon phone"></a>
         <a href="https://zalo.me/0768714480" onclick="dialzalo('0768714480')" target="_blank" class="icon zalo"></a>
@@ -82,7 +80,7 @@
       <a class="cta-btn" href="tel:0768714480"><i class="bi bi-telephone"></i>&nbsp; Gọi ngay</a>
 
     </div>
-    
+
   </header>
 
   <main class="main">
@@ -411,8 +409,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" style="display: none;" class="scroll-top d-flex align-items-center justify-content-center"><i
-      class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" style="display: none;"
+    class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -510,42 +508,42 @@
     });
   </script>
   <!-- scroll hiện sau 3s -->
-<script>
-  // mở/đóng popup như cũ
-  function showFormPopup(){
-    document.getElementById('formPopup').style.display='block';
-    document.getElementById('formPopupOverlay').style.display='block';
-  }
-  function closeFormPopup(){
-    document.getElementById('formPopup').style.display='none';
-    document.getElementById('formPopupOverlay').style.display='none';
-  }
-
-  window.addEventListener('DOMContentLoaded', function () {
-    const img = document.getElementById('openPopupImg');
-    const overlay = document.getElementById('formPopupOverlay');
-    if (overlay) overlay.addEventListener('click', closeFormPopup);
-    if (img) img.addEventListener('click', showFormPopup);
-
-    const SCROLL_TRIGGER = 200; // đổi số này nếu muốn xuất hiện sớm/muộn hơn
-
-    function onScrollReveal(){
-      if (window.scrollY > SCROLL_TRIGGER){
-        img.classList.add('show');       // thêm class để chạy animation
-        window.removeEventListener('scroll', onScrollReveal); // chỉ chạy 1 lần
-      }
+  <script>
+    // mở/đóng popup như cũ
+    function showFormPopup() {
+      document.getElementById('formPopup').style.display = 'block';
+      document.getElementById('formPopupOverlay').style.display = 'block';
     }
-    window.addEventListener('scroll', onScrollReveal);
-    onScrollReveal(); // phòng khi người dùng đã ở dưới sẵn
-  });
-</script>
+    function closeFormPopup() {
+      document.getElementById('formPopup').style.display = 'none';
+      document.getElementById('formPopupOverlay').style.display = 'none';
+    }
+
+    window.addEventListener('DOMContentLoaded', function () {
+      const img = document.getElementById('openPopupImg');
+      const overlay = document.getElementById('formPopupOverlay');
+      if (overlay) overlay.addEventListener('click', closeFormPopup);
+      if (img) img.addEventListener('click', showFormPopup);
+
+      const SCROLL_TRIGGER = 200; // đổi số này nếu muốn xuất hiện sớm/muộn hơn
+
+      function onScrollReveal() {
+        if (window.scrollY > SCROLL_TRIGGER) {
+          img.classList.add('show');       // thêm class để chạy animation
+          window.removeEventListener('scroll', onScrollReveal); // chỉ chạy 1 lần
+        }
+      }
+      window.addEventListener('scroll', onScrollReveal);
+      onScrollReveal(); // phòng khi người dùng đã ở dưới sẵn
+    });
+  </script>
 
 
-<script>
-  // Mở popup khi nhấn vào ảnh
-  document.getElementById('openPopupImg')
-    .addEventListener('click', showFormPopup);
-</script>
+  <script>
+    // Mở popup khi nhấn vào ảnh
+    document.getElementById('openPopupImg')
+      .addEventListener('click', showFormPopup);
+  </script>
 
 
 
