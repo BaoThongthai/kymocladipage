@@ -1,6 +1,7 @@
 (function () {
   const container = document.getElementById('youtube-video-list');
   const section = document.getElementById('videos');
+  const allVideosLink = document.getElementById('video-all-link');
   const links = Array.isArray(window.KY_MOC_YOUTUBE_VIDEOS)
     ? window.KY_MOC_YOUTUBE_VIDEOS
     : [];
@@ -8,13 +9,21 @@
   if (!container || !section) return;
 
   const videoIds = links.map(getYoutubeId).filter(Boolean);
+  const configuredLimit = Number.parseInt(container.dataset.limit, 10);
+  const visibleVideoIds = Number.isInteger(configuredLimit) && configuredLimit > 0
+    ? videoIds.slice(0, configuredLimit)
+    : videoIds;
 
   if (videoIds.length === 0) {
     section.hidden = true;
     return;
   }
 
-  container.innerHTML = videoIds.map((videoId, index) => `
+  if (allVideosLink && visibleVideoIds.length >= videoIds.length) {
+    allVideosLink.parentElement.hidden = true;
+  }
+
+  container.innerHTML = visibleVideoIds.map((videoId, index) => `
     <div class="col-lg-6 col-md-10">
       <div class="video-card">
         <div class="video-frame">

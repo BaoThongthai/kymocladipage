@@ -79,6 +79,28 @@
   border: 0;
 }
 
+.video-all-button {
+  display: inline-block;
+  padding: 12px 28px;
+  border: 2px solid #ff4d28;
+  border-radius: 6px;
+  background: #ff4d28;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.video-all-button:hover {
+  background: #fff;
+  color: #ff4d28;
+}
+
+.videos-page-main {
+  padding-top: 90px;
+  min-height: 100vh;
+  background: #f4f6f8;
+}
+
 /* Nut xem them san pham */
 .portfolio-load-more {
   padding: 12px 28px;

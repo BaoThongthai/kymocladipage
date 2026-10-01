@@ -4,4 +4,5 @@ window.KY_MOC_YOUTUBE_VIDEOS = [
   'https://youtube.com/shorts/xqKcDYtguYo',
   'https://youtube.com/shorts/4h9jDaAITUA',
   'https://youtube.com/shorts/KRJhhbWTCm8',
+  'https://youtu.be/aaKFAOi8O3E',
 ];
