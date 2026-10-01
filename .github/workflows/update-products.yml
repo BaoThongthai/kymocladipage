@@ -1,0 +1,33 @@
+name: Cap nhat danh sach san pham
+
+on:
+  push:
+    paths:
+      - 'assets/img/portfolio/sofa-go/**'
+      - 'assets/img/portfolio/ban-an/**'
+      - 'assets/img/portfolio/giuong/**'
+      - 'assets/img/portfolio/tu-tivi/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-products:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Tao danh sach anh tu 4 thu muc
+        shell: powershell
+        run: .\tools\update-products.ps1
+      - name: Luu danh sach moi
+        shell: bash
+        run: |
+          if git diff --quiet -- assets/js/products.js; then
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/js/products.js
+          git commit -m "Tu dong cap nhat danh sach san pham"
+          git push
