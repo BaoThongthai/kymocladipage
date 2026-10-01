@@ -101,6 +101,17 @@
   background: #f4f6f8;
 }
 
+/* Trang video khong co anh hero nen menu can nen toi co dinh */
+.videos-page .header {
+  --background-color: rgba(21, 34, 43, 0.97);
+  --default-color: #fff;
+  --heading-color: #fff;
+  --nav-color: #fff;
+  --nav-hover-color: #ff4d28;
+  background-color: var(--background-color);
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.16);
+}
+
 /* Nut xem them san pham */
 .portfolio-load-more {
   padding: 12px 28px;
