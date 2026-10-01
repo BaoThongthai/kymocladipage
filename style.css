@@ -36,6 +36,72 @@
   background-image: url('https://e7.pngegg.com/pngimages/759/922/png-clipart-telephone-logo-iphone-telephone-call-smartphone-phone-electronics-text-thumbnail.png');
 }
 
+/* Cac nut lien he trong bieu mau - dung icon noi bo, khong phu thuoc anh ben ngoai */
+.contact-social-links .contact-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 21px;
+  line-height: 1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-social-links .contact-social:hover {
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 7px 16px rgba(0, 0, 0, 0.2);
+}
+
+.contact-social-links .phone-link {
+  background: #24c45a;
+}
+
+.contact-social-links .facebook-link {
+  background: #1877f2;
+}
+
+.contact-social-links .messenger-link {
+  background: linear-gradient(135deg, #00b2ff, #006aff 48%, #a033ff);
+}
+
+.contact-social-links .zalo-link {
+  background: #0667d9;
+}
+
+.contact-social-links .zalo-link span {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+/* Chinh sach bao hanh */
+.warranty .warranty-image-link {
+  display: block;
+  max-width: 1280px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #f7f0e7;
+  box-shadow: 0 10px 35px rgba(58, 39, 24, 0.13);
+}
+
+.warranty .warranty-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.warranty .warranty-image-link:hover .warranty-image {
+  transform: scale(1.01);
+}
+
 
 /* ghim khi sroll */
 #portfolio-filters {
