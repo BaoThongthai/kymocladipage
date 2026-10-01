@@ -1,12 +1,12 @@
 (function () {
   const container = document.getElementById('portfolio-products');
-  const products = Array.isArray(window.KY_MOC_PRODUCTS) ? window.KY_MOC_PRODUCTS : [];
+  const products = Array.isArray(window.KY_MOC_PRODUCTS) ? interleaveByCategory(window.KY_MOC_PRODUCTS) : [];
 
   if (!container || products.length === 0) return;
 
   const messengerUrl = 'https://m.me/noithatkymocdn';
 
-  container.innerHTML = products.map((product) => {
+  container.innerHTML = products.map((product, index) => {
     const path = product.path.split('/').map(encodeURIComponent).join('/');
     const title = escapeHtml(product.title);
     const description = escapeHtml(product.description);
@@ -14,7 +14,7 @@
     const gallery = escapeHtml(product.gallery);
 
     return `
-      <div class="col-lg-4 col-md-6 portfolio-item isotope-item ${category}">
+      <div class="col-lg-4 col-md-6 portfolio-item isotope-item ${category}${index < 10 ? ' show-in-all' : ''}">
         <div class="portfolio-content h-100">
           <img src="${path}" class="img-fluid" alt="${title}" loading="lazy">
           <div class="portfolio-info">
@@ -28,6 +28,36 @@
         </div>
       </div>`;
   }).join('');
+
+  function interleaveByCategory(items) {
+    const groups = [];
+
+    items.forEach((item) => {
+      let group = groups.find((current) => current.category === item.category);
+      if (!group) {
+        group = { category: item.category, items: [] };
+        groups.push(group);
+      }
+      group.items.push(item);
+    });
+
+    const result = [];
+    let row = 0;
+    let added;
+
+    do {
+      added = false;
+      groups.forEach((group) => {
+        if (group.items[row]) {
+          result.push(group.items[row]);
+          added = true;
+        }
+      });
+      row += 1;
+    } while (added);
+
+    return result;
+  }
 
   function escapeHtml(value) {
     return String(value).replace(/[&<>'"]/g, (character) => ({

@@ -151,11 +151,38 @@
         initIsotope.arrange({
           filter: this.getAttribute('data-filter')
         });
+        let loadMoreWrap = isotopeItem.querySelector('.portfolio-load-more-wrap');
+        if (loadMoreWrap) {
+          let hasMoreItems = isotopeItem.querySelector('.isotope-item:not(.show-in-all)');
+          loadMoreWrap.style.display = this.getAttribute('data-filter') === '.show-in-all' && hasMoreItems ? '' : 'none';
+        }
         if (typeof aosInit === 'function') {
           aosInit();
         }
       }, false);
     });
+
+    let loadMoreButton = isotopeItem.querySelector('.portfolio-load-more');
+    if (loadMoreButton) {
+      let updateLoadMoreButton = function() {
+        let remainingItems = isotopeItem.querySelectorAll('.isotope-item:not(.show-in-all)');
+        loadMoreButton.closest('.portfolio-load-more-wrap').style.display = remainingItems.length ? '' : 'none';
+      };
+
+      loadMoreButton.addEventListener('click', function() {
+        let remainingItems = Array.from(isotopeItem.querySelectorAll('.isotope-item:not(.show-in-all)'));
+        remainingItems.slice(0, 10).forEach(function(item) {
+          item.classList.add('show-in-all');
+        });
+
+        if (initIsotope) {
+          initIsotope.arrange({ filter: '.show-in-all' });
+        }
+        updateLoadMoreButton();
+      });
+
+      updateLoadMoreButton();
+    }
 
   });
 

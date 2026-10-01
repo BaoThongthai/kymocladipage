@@ -79,6 +79,22 @@
   border: 0;
 }
 
+/* Nut xem them san pham */
+.portfolio-load-more {
+  padding: 12px 28px;
+  border: 2px solid #ff4d28;
+  border-radius: 6px;
+  background: #ff4d28;
+  color: #fff;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.portfolio-load-more:hover {
+  background: #fff;
+  color: #ff4d28;
+}
+
 
 /* css nút hiện form tư vấn */
 .popup-fab-img {
